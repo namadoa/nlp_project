@@ -28,7 +28,8 @@ def grade_documents(state: GraphState) -> Dict[str, Any]:
             {"query": question, "documents": d.page_content}
         )
         grade = score.binary_score
-        if grade.lower() == "yes":
+        print("GRADE", grade)
+        if grade:
             print("---GRADE: DOCUMENT RELEVANT---")
             filtered_docs.append(d)
         else:
