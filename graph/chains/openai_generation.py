@@ -254,4 +254,4 @@ def extract_citations_from_text(text, documents):
                 "page": page
             })
     
-    return citations 
+    return citations
